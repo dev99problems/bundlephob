@@ -1,0 +1,26 @@
+{
+  "name": "alfred-bundlephob",
+  "version": "0.0.1",
+  "description": "Alfred workflow to check package size using bundle-phobia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/eugenechu/bundlephob.git"
+  },
+  "author": "Eugene Chulkov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eugenechu/bundlephob/issues"
+  },
+  "homepage": "https://github.com/eugenechu/bundlephob#readme",
+  "dependencies": {
+    "alfy": "^0.9.1",
+    "bundle-phobia-cli": "^0.13.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}
