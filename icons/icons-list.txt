@@ -1,0 +1,6 @@
+boxes.png
+— <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
+
+
+sizes.png
+- <div>Icons made by <a href="https://www.flaticon.com/authors/metropolicons" title="Metropolicons">Metropolicons</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>

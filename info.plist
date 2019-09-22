@@ -10,7 +10,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>67C5F41B-00D0-4070-B7A4-2A01059BD2E7</string>
+				<string>5E86D59E-7E08-4563-BD32-D44C0FBBA242</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -46,6 +46,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>bp</string>
+				<key>subtext</key>
+				<string>Shows '{query}' package size</string>
+				<key>text</key>
+				<string>Bundle Phobia</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>46868D52-8A8B-4704-8D32-1A80702E1DA6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -59,13 +80,13 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>pho</string>
+				<string>bp</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
 				<true/>
 				<key>queuedelaymode</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
@@ -95,46 +116,49 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>0</integer>
-				<key>keyword</key>
-				<string>pho</string>
-				<key>subtext</key>
-				<string>Shows '{query}' package size</string>
-				<key>text</key>
-				<string>Bundle Phobia</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>46868D52-8A8B-4704-8D32-1A80702E1DA6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
 				<key>script</key>
-				<string>./node_modules/.bin/bundle-phobia "$1"</string>
+				<string>./node_modules/.bin/run-node get-size.js "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>67C5F41B-00D0-4070-B7A4-2A01059BD2E7</string>
+			<string>5E86D59E-7E08-4563-BD32-D44C0FBBA242</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -144,7 +168,7 @@
 		<key>3ABA08CE-7EAE-411D-84AB-2B71DA91BF26</key>
 		<dict>
 			<key>xpos</key>
-			<integer>305</integer>
+			<integer>255</integer>
 			<key>ypos</key>
 			<integer>60</integer>
 		</dict>
@@ -155,10 +179,10 @@
 			<key>ypos</key>
 			<integer>60</integer>
 		</dict>
-		<key>67C5F41B-00D0-4070-B7A4-2A01059BD2E7</key>
+		<key>5E86D59E-7E08-4563-BD32-D44C0FBBA242</key>
 		<dict>
 			<key>xpos</key>
-			<integer>565</integer>
+			<integer>500</integer>
 			<key>ypos</key>
 			<integer>60</integer>
 		</dict>
