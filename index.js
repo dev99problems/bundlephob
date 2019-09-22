@@ -1,7 +1,13 @@
 (async () => {
   const alfy = require('alfy')
+  
+  const packageQuery = process.argv[2] || ''
+  const isQueryEmpty = !(!!packageQuery.trim().length)
 
-  const packageQuery = process.argv[2]
+  if (isQueryEmpty) {
+    alfy.output(alfy.cache.get('last-search-results'))
+    return
+  }
 
   const data = await alfy.fetch(`https://api.npms.io/v2/search/suggestions?q=${packageQuery}`) || []
 
@@ -10,23 +16,11 @@
 
     return ({
       title: name,
-      subtitle: description
+      subtitle: description,
+      arg: name
     })
   })
 
+  alfy.cache.set('last-search-results', items)
   alfy.output(items)
 })()
-
-
-/*(async () => {
-  const alfy = require('alfy')
-
-  const data = await alfy.fetch('https://api.npms.io/v2/search/suggestions?q=lodash.get') || []
-
-  const items = data.map(element => ({
-    title: element.package.name,
-    subtitle: 'dodo pizza'
-  }))
-
-  alfy.output(items)
-})()*/
