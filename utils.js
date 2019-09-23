@@ -1,0 +1,1 @@
+exports.getSizeInKB = (size) => `${(size / 1000).toFixed(2)} kB`

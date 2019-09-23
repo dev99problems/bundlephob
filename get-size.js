@@ -1,15 +1,20 @@
 (async () => {
-  const getSizeInKB = (size) => (size / 1000).toFixed(2)
-
   const alfy = require('alfy')
+  const getPkgHistory = require('./history.js')
+  const { getSizeInKB } = require('./utils')
 
-  const packageName = process.argv[2]
+  const packageQuery = process.argv[2] || ''
 
-  const data = await alfy.fetch(`https://bundlephobia.com/api/size?package=${packageName}&record=true`) || {}
+  if (!packageQuery.includes('@') || /@$/.test(packageQuery)) {
+    await getPkgHistory(packageQuery)
+    return
+  }
+
+  const data = await alfy.fetch(`https://bundlephobia.com/api/size?package=${packageQuery}&record=true`) || {}
 
   const items = [{
-    title: `Minified: ~${getSizeInKB(data.size)} kB`,
-    subtitle: `Minified + GZipped size: ~${getSizeInKB(data.gzip)} kB`,
+    title: `Minified: ~${getSizeInKB(data.size)}`,
+    subtitle: `Minified + GZipped: ~${getSizeInKB(data.gzip)}`,
     name: data.name + data.version
   }]
 
