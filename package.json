@@ -17,10 +17,22 @@
   },
   "homepage": "https://github.com/eugenechu/bundlephob#readme",
   "dependencies": {
-    "alfy": "^0.9.1",
-    "bundle-phobia-cli": "^0.13.0"
+    "alfy": "^0.9.1"
   },
   "devDependencies": {
+    "husky": "^3.0.8",
+    "lint-staged": "^9.4.1",
     "prettier": "^1.18.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
