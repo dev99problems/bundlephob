@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.eugenechu.bundlephob</string>
+	<key>category</key>
+	<string>Tools</string>
 	<key>connections</key>
 	<dict>
 		<key>3ABA08CE-7EAE-411D-84AB-2B71DA91BF26</key>
@@ -21,9 +23,9 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Eugene Chulkov</string>
+	<string>Eugene Chulkov(@yourhem)</string>
 	<key>description</key>
-	<string>Use 'bp' and enter package name to get it's size</string>
+	<string>Workflow to get size of npm packages</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
