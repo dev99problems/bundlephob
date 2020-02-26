@@ -1,9 +1,11 @@
 {
   "name": "alfred-bundlephob",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Alfred workflow to check package size using bundle-phobia",
   "main": "index.js",
   "scripts": {
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,6 +14,16 @@
   },
   "author": "Eugene Chulkov",
   "license": "MIT",
+  "keywords": [
+    "bundle",
+    "size",
+    "bundlephob",
+    "package",
+    "alfy",
+    "alfred",
+    "workflow",
+    "bundle-phobia"
+  ],
   "bugs": {
     "url": "https://github.com/eugenechu/bundlephob/issues"
   },
