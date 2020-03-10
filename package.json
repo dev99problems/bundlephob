@@ -1,8 +1,8 @@
 {
   "name": "alfred-bundlephob",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Alfred workflow to check package size using bundle-phobia",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup",
