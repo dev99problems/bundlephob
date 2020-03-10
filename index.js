@@ -11,11 +11,11 @@
 
   const data =
     (await alfy.fetch(
-      `https://api.npms.io/v2/search/suggestions?q=${packageQuery}`
+      `https://www.npmjs.com/search/suggestions?q=${packageQuery}`
     )) || []
 
   const items = data.map(element => {
-    const { name, description, version } = (element || {}).package || {}
+    const { name, description, version } = element || {}
     const packageTitle = `${name}@${version}`
 
     return {
